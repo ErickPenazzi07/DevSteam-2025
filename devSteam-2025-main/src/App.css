@@ -45,3 +45,20 @@ body {
 input.form-control:focus {
   box-shadow: none;
 }
+
+.marginHeader{
+  margin-top: 200px;
+}
+
+.LoginCard {
+  width: 650px;
+  margin: 0 auto;
+  margin-top: 300px;
+  background-color:#D9D9D9;
+  padding: 20px;
+  border-radius: 10px;
+  border-radius: 50px;
+  
+
+
+}
