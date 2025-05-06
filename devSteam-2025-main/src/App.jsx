@@ -9,6 +9,7 @@ import OutrosJogos from "./components/OutrosJogos";
 import Footer from "./components/Footer";
 import Perfil from "./pages/Perfil";
 
+
 function App() {
   const [carrinhoItem, setCarrinhoItem] = useState([]);
 
