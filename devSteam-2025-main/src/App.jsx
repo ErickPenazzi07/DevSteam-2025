@@ -7,6 +7,7 @@ import Promotion from "./components/Promotion";
 import CarrinhoOffCanvas from "./components/CarrinhoOffCanvas";
 import OutrosJogos from "./components/OutrosJogos";
 
+
 function App() {
   const [carrinhoItem, setCarrinhoItem] = useState([]);
 

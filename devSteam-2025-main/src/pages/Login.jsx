@@ -19,7 +19,7 @@ const Login = () => {
   return (
     <>
     <HeaderSimples />
-    <div className=" card LoginCard d-flex border-3 border-black " >
+    <div className=" card LoginCard d-flex border-3 border-black w-25 col-lg-6 col-md-8 col-sm-12 " >
       
     <div className="container py-5 w-50">
       <form onSubmit={handleLogin}>

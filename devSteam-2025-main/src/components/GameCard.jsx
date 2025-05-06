@@ -1,11 +1,8 @@
 import React from 'react'
 
-const GameCard = (props) => {
+const GameCard = () => {
   return (
-    <div>
-        
-        Olá, sou o jogo de número {props.id}
-    </div>
+<></>
   )
 }
 

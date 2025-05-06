@@ -1,6 +1,7 @@
 import React from "react";
 import GameCard from "./GameCard";
-
+import "../App.css"
+import imagemPubg from "../pubg.jpg";
 const OutrosJogos = () => {
   const games = React.useMemo(
     () => [
@@ -97,16 +98,18 @@ const OutrosJogos = () => {
   );
 
   return (
-    <div id="outrosJogos" className="container w-75 my-5">
-      <h2 className="text-uppercase text-center text-md-start ms-md-5 ps-md-3 mb-4">
-        Outros Jogos
+    <>
+    <div className="container w-75 my-4 mt-5">
+    <h2 className="text-uppercase text-center text-md-start ms-md-5 ps-md-3 mb-4">
+        Destaques:
       </h2>
-      <div id="itensJogos" className="d-flex flex-column ms-md-5 ps-md-3 gap-4">
-        {games.map((item) => (
-          <GameCard key={item.id} id={item.id} />
-        ))}
+      <div className="row">
+        <div className="card h-75 d-flex ">
+        <img src={imagemPubg} className="ImagemCard d-flex"/>
+        </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 
