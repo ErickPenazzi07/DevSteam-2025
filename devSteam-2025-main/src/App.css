@@ -53,7 +53,6 @@ input.form-control:focus {
 .LoginCard {
   width: 650px;
   margin: 0 auto;
-  margin-top: 300px;
   background-color: #d9d9d9;
   padding: 10px;
   border-radius: 10px;
@@ -69,7 +68,54 @@ input.form-control:focus {
   border-radius: 10px;
   border-radius: 50px;
 }
-.ImagemCard{
+
+.ImagemCard {
   width: 200px;
- 
+}
+
+.steam-card {
+  background-color: #2a475e;
+  color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 650px;
+  margin: 30px auto;
+}
+
+.steam-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.animacao :hover {
+  transform: scale(1.03);
+}
+
+.game-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.game-tags {
+  color: #c7d5e0;
+  font-size: 0.9rem;
+}
+
+.price {
+  font-size: 1.3rem;
+  color: #ffd700;
+}
+
+.btn-steam {
+  background-color: #a4d007;
+  color: black;
+  font-weight: bold;
+}
+
+.btn-steam:hover {
+  background-color: #b5e008;
+}
+
+.dvh-100 {
+  height: 100dvh;
 }
