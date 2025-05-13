@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import PromoCard from "./PromoCard";
 import { GlobalContext } from "../main.jsx";
+import { Link } from "react-router";
 
 const Promotion = (props) => {
   const [aleatorio, setAleatorio] = useState([]);
@@ -121,16 +122,19 @@ const Promotion = (props) => {
       >
         {/* mapeando um array com react */}
         {aleatorio.map((jogo) => (
-          <PromoCard
-            key={jogo.id}
-            titulo={jogo.titulo}
-            preco={jogo.preco}
-            precoFormatado={formatarMoeda(jogo.preco)}
-            desconto={jogo.desconto}
-            imagem={jogo.imagem}
-            formatarMoeda={formatarMoeda} // Passando a função para o PromoCard
-            onAddCarrinho={() => props.onAddCarrinho(jogo)}
-          />
+          // <Link to={`/detalhes/${jogo.id}`} state={{ jogo }}>
+          <Link to={`/detalhes`} state={{ jogo }} key={jogo.id}>
+            <PromoCard
+              key={jogo.id}
+              titulo={jogo.titulo}
+              preco={jogo.preco}
+              precoFormatado={formatarMoeda(jogo.preco)}
+              desconto={jogo.desconto}
+              imagem={jogo.imagem}
+              formatarMoeda={formatarMoeda} // Passando a função para o PromoCard
+              onAddCarrinho={() => props.onAddCarrinho(jogo)}
+            />
+          </Link>
         ))}
       </div>
     </div>

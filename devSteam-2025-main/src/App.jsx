@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 
 import "./App.css";
 
+import { BrowserRouter, Routes, Route } from "react-router";
+import ItemList from "../src/components/ItemList";
+import ItemDetalhes from "../src/components/ItemDetalhes";
 import Header from "./components/Header";
 import Promotion from "./components/Promotion";
 import CarrinhoOffCanvas from "./components/CarrinhoOffCanvas";
 import OutrosJogos from "./components/OutrosJogos";
-
 
 function App() {
   const [carrinhoItem, setCarrinhoItem] = useState([]);
@@ -66,6 +68,8 @@ function App() {
         carrinhoItem={carrinhoItem}
       />
       <OutrosJogos />
+
+      
     </>
   );
 }
