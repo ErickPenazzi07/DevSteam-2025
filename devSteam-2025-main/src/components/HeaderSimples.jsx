@@ -9,7 +9,7 @@ const HeaderSimples = () => {
 
   return (
     <div
-      className="position-fixed top-0 start-0 end-0 d-flex justify-content-center align-items-center bg-dark py-3"
+      className=" top-0 start-0 end-0 d-flex justify-content-center align-items-center bg-dark py-3"
       onClick={handleClick}
       style={{ cursor: "pointer" }}
     >

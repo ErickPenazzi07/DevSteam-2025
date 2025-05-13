@@ -60,56 +60,45 @@ input.form-control:focus {
 }
 
 .CardCartao {
-  background-color: #d9d9d9;
+  background: linear-gradient(to bottom, #19587b, #2b87ae) !important;
 }
 
 .ImagemCard {
-  width: 200px;
+  width: 300px;
+  height: 180px;
+
 }
 
-.steam-card {
-  background-color: #2a475e;
+.cartao-visual {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cartao {
+  width: 350px;
+  height: 200px;
+  background: linear-gradient(135deg, #1e90ff, #87cefa);
+  border-radius: 12px;
   color: white;
-  border-radius: 5px;
-  overflow: hidden;
-  max-width: 650px;
-  margin: 30px auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.steam-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.animacao :hover {
-  transform: scale(1.03);
+.cartao-numero {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
 }
 
-.game-title {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.game-tags {
-  color: #c7d5e0;
-  font-size: 0.9rem;
-}
-
-.price {
-  font-size: 1.3rem;
-  color: #ffd700;
-}
-
-.btn-steam {
-  background-color: #a4d007;
-  color: black;
-  font-weight: bold;
-}
-
-.btn-steam:hover {
-  background-color: #b5e008;
+.cartao-nome,
+.cartao-validade {
+  font-size: 1rem;
 }
 
 .dvh-100 {
   height: 100dvh;
+  
 }

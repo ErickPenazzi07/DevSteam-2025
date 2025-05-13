@@ -1,9 +1,8 @@
 import React from "react";
-import GameCard from "./GameCard";
-import "../App.css"
-import imagemPubg from "../img/pubg.jpg"
+import "../App.css";
 
-const OutrosJogos = () => {
+
+const OutrosJogos = (props) => {
   const games = React.useMemo(
     () => [
       {
@@ -100,30 +99,7 @@ const OutrosJogos = () => {
 
   return (
     
-    <div className="container w-75 my-4 d-flex flex-column mt-5">
-          <h2 className="text-uppercase text-center text-md-start ms-md-5 ps-md-3 mb-4">
-        Destaque:
-      </h2>
-<div className="steam-card d-flex flex-column flex-md-row justify-content-between "> 
-      <div className="col-4">
-        <img
-          src={imagemPubg}
-          alt="CSGO"
-          className="img-fluid h-100"
-          />
-      </div>
-      <div className="col-8 p-3 d-flex flex-column justify-content-between">
-        <div>
-          <div className="game-title">COUNTER STRIKE: GLOBAL OFFENSIVE</div>
-          <div className="game-tags">Ação, Estratégia, Multijogador.</div>
-        </div>
-        <div className="d-flex justify-content-between align-items-center mt-3">
-          <div className="price">R$99,90</div>
-          <button className="btn btn-steam">ADICIONAR AO CARRINHO</button>
-        </div>
-      </div>
-    </div>
-          </div>
+ <></>
   );
 };
 

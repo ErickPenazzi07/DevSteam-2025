@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Promotion from "./components/Promotion";
 import CarrinhoOffCanvas from "./components/CarrinhoOffCanvas";
 import OutrosJogos from "./components/OutrosJogos";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -66,6 +67,7 @@ function App() {
         carrinhoItem={carrinhoItem}
       />
       <OutrosJogos />
+      <Footer />
     </>
   );
 }

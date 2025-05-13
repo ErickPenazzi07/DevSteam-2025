@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "../App.css";
 import HeaderSimples from "../components/HeaderSimples";
+import Footer from "../components/Footer";
 
 const Cartoes = () => {
+  const [numeroCartao, setNumeroCartao] = useState("");
+  const [nomeTitular, setNomeTitular] = useState("");
+  const [validade, setValidade] = useState("");
+
   return (
     <>
       <HeaderSimples />
@@ -13,33 +18,35 @@ const Cartoes = () => {
             <form>
               <div className="row">
                 <div className="mb-3 col-6">
-                  <label className="form-label" htmlFor="frmNome">
+                  <label className="form-label" htmlFor="frmNumero">
                     Numero Cartão:
+                  </label>
+                  <input
+                    className="form-control bg-transparent border-black"
+                    type="text"
+                    name="frmNumero"
+                    id="frmNumero"
+                    onChange={(e) => setNumeroCartao(e.target.value)} // Atualiza o número no cartão
+                  />
+                </div>
+
+                <div className="mb-3 col-6">
+                  <label className="form-label" htmlFor="frmNome">
+                    Nome do Titular:
                   </label>
                   <input
                     className="form-control bg-transparent border-black"
                     type="text"
                     name="frmNome"
                     id="frmNome"
-                  />
-                </div>
-
-                <div className="mb-3 col-6">
-                  <label className="form-label" htmlFor="frmEmail">
-                    Nome do Titular:
-                  </label>
-                  <input
-                    className="form-control bg-transparent border-black"
-                    type="email"
-                    name="frmEmail"
-                    id="frmEmail"
+                    onChange={(e) => setNomeTitular(e.target.value)} // Atualiza o nome no cartão
                   />
                 </div>
               </div>
               <div className="row">
                 <div className="col-8">
                   <div className="row">
-                    <div className="mb-3 col-6">
+                    <div className="mb-3 col-7">
                       <label className="form-label" htmlFor="frmValidade">
                         Validade:
                       </label>
@@ -48,9 +55,10 @@ const Cartoes = () => {
                         type="text"
                         name="frmValidade"
                         id="frmValidade"
+                        onChange={(e) => setValidade(e.target.value)} // Atualiza a validade no cartão
                       />
                     </div>
-                    <div className="mb-3 col-6">
+                    <div className="mb-3 col-5">
                       <label className="form-label" htmlFor="frmCVV">
                         CVV:
                       </label>
@@ -83,17 +91,20 @@ const Cartoes = () => {
                   </div>
                 </div>
                 <div className="col-4 d-flex align-items-center">
-                  <img
-                    className="img-fluid"
-                    src="https://placehold.co/300x180"
-                    alt=""
-                  />
+                  <div className="cartao-visual">
+                    <div className="cartao">
+                      <div className="cartao-numero">{numeroCartao || "**** **** **** ****"}</div>
+                      <div className="cartao-nome">{nomeTitular || "NOME DO TITULAR"}</div>
+                      <div className="cartao-validade">{validade || "MM/AA"}</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </form>
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
