@@ -4,6 +4,10 @@ import "../App.css";
 import imagemPubg from "../pubg.jpg";
 import { Link } from "react-router";
 const OutrosJogos = () => {
+import "../App.css";
+
+
+const OutrosJogos = (props) => {
   const games = React.useMemo(
     () => [
       {
@@ -99,18 +103,8 @@ const OutrosJogos = () => {
   );
 
   return (
-    <>
-      <div className="container w-75 my-4 mt-5">
-        <h2 className="text-uppercase text-center text-md-start ms-md-5 ps-md-3 mb-4">
-          Destaques:
-        </h2>
-        <div className="row">
-          <div className="card h-75 d-flex ">
-            <img src={imagemPubg} className="ImagemCard d-flex" />
-          </div>
-        </div>
-      </div>
-    </>
+    
+ <></>
   );
 };
 
